@@ -5,6 +5,7 @@
 	Stellar by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
 */
 
 html, body, div, span, applet, object,
@@ -3783,3 +3784,63 @@ input, select, textarea {
 			}
 
 		}
+
+/* ===== Vertical Timeline for Stellar ===== */
+.timeline {
+  position: relative;
+  margin: 2rem 0 0;
+  padding: 1rem 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255,255,255,0.25);
+}
+.tl-item {
+  position: relative;
+  padding-left: 64px;
+  margin: 1.5rem 0;
+}
+.tl-dot {
+  position: absolute;
+  left: 18px;
+  top: 10px;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #f05656; /* tweak to match your accent */
+  box-shadow: 0 0 0 4px rgba(240,86,86,0.15);
+}
+.tl-content {
+  background: rgba(255,255,255,0.06);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,0.15);
+}
+.tl-date { font-size: 0.9rem; opacity: 0.8; }
+.tl-title { margin: 0.2rem 0 0.6rem; }
+.tl-content ul { margin: 0 0 0.2rem 1.1rem; }
+
+
+/* === Cert cards (2×2 grid) === */
+.cert-grid { margin-top: 1rem; }
+.cert-card {
+  text-align: center;
+  background: rgba(255,255,255,0.06);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.25rem 0.5rem;
+  box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,0.15);
+  height: 100%;
+}
+.cert-card .icon.major { margin-bottom: 0.25rem; }
+.cert-card h3 { margin: 0.25rem 0 0.75rem; }
+.cert-list { text-align: left; display: inline-block; }
+
+/* ensure 2 per row on wide screens */
+@media screen and (min-width: 980px) {
+  .cert-grid .col-6 { display: flex; }
+}
