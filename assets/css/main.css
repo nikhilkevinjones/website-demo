@@ -3826,21 +3826,3 @@ input, select, textarea {
 .tl-content ul { margin: 0 0 0.2rem 1.1rem; }
 
 
-/* === Cert cards (2×2 grid) === */
-.cert-grid { margin-top: 1rem; }
-.cert-card {
-  text-align: center;
-  background: rgba(255,255,255,0.06);
-  border-radius: 0.75rem;
-  padding: 1.25rem 1.25rem 0.5rem;
-  box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,0.15);
-  height: 100%;
-}
-.cert-card .icon.major { margin-bottom: 0.25rem; }
-.cert-card h3 { margin: 0.25rem 0 0.75rem; }
-.cert-list { text-align: left; display: inline-block; }
-
-/* ensure 2 per row on wide screens */
-@media screen and (min-width: 980px) {
-  .cert-grid .col-6 { display: flex; }
-}
