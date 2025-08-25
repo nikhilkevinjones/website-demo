@@ -21,7 +21,7 @@
 					<header id="header" class="alt">
 						<span class="logo"><img src="images/emoji.png" alt="" /></span>
 						<h1>NIKHIL KEVIN JONES</h1>
-						<p>IT CONSULTANT · CLOUD ENGINEER · ITSM <br />
+						<p>IT CONSULTANT · CLOUD ENGINEER · ITSM · SERVICENOW <br />
 <!-- 						built by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a>.</p> -->
 					</header>
 
@@ -32,8 +32,8 @@
 							<li><a href="#exp">My Work Experience So Far</a></li>
 							<li><a href="#skills">Skills</a></li>
 							<li><a href="#cert">Certifications</a></li>
-							<li><a href="#projects">Projects</a>
-							<li><a href="#contact">Get In Touch</a></li>
+<!-- 							<li><a href="#projects">Projects</a> -->
+							<li><a href="#contact">Get In Touch</a></li> 
 							
 						</ul>
 					</nav>
@@ -60,87 +60,63 @@
 								</div>
 							</section>
 
-							<!-- EXPERIENCE (Vertical Timeline) -->
-							<section id="exp" class="main special">
-							  <header class="major">
-							    <h2>EXPERIENCE</h2>
-							    
-							  </header>
-							<ul class="features features-vertical">
-	    <!-- Siemens Healthineers -->
-							    <li>
-							      <img class="company-logo" src="images/logos/siemens.png" alt="Siemens Healthineers logo">
-							      <h3>Working Student – IT Consultant · Siemens Healthineers</h3>
-							      <p class="exp-meta">Jan 2023 – Mar 2025 · Erlangen, Germany</p>
-							      <p>
-							        Cloud/ITSM support across Azure migration assessments, data inventory, ServiceNow workflow testing/automation,
-							        and analytics for stakeholders.
-							      </p>
-							      <ul class="exp-bullets">
-							        <li>Assessed on-prem servers/apps for Azure readiness and migration planning.</li>
-							        <li>Built a centralized data inventory; automated ELT to Snowflake; integrated CMDB/Excel/ITAM via SQL.</li>
-							        <li>Created stakeholder dashboards in Power BI and authored documentation/KBs.</li>
-							        <li>Regression-tested ServiceNow workflows (install, provisioning, decommission) and adjusted Flow Designer steps.</li>
-							      </ul>
-							    </li>
-							
-							    <!-- FAU -->
-							    <li>
-							      <img class="company-logo" src="images/logos/fau.png" alt="FAU logo">
-							      <h3>Student Research Assistant · FAU (Lehrstuhl für Informationstechnik)</h3>
-							      <p class="exp-meta">Sep 2022 – Dec 2022 · Erlangen, Germany</p>
-							      <p>Supported development teams with build automation and delivery quality.</p>
-							      <ul class="exp-bullets">
-							        <li>Developed and maintained GitLab CI/CD pipelines for reliable deployments.</li>
-							        <li>Contributed code, reviews, and testing to keep projects stable and releasable.</li>
-							      </ul>
-							    </li>
-							
-							    <!-- Accenture -->
-							    <li>
-							      <img class="company-logo" src="images/logos/accenture.png" alt="Accenture logo">
-							      <h3>Associate Software Engineer · Accenture</h3>
-							      <p class="exp-meta">Nov 2020 – Mar 2022 · Bengaluru, India</p>
-							      <p>Delivery and operations across CI/CD, data engineering, and ITSM.</p>
-							      <ul class="exp-bullets">
-							        <li>Implemented CI/CD for builds, tests, and deployments; improved release consistency.</li>
-							        <li>Wrote SQL and stored procedures for compliant data validation and reporting.</li>
-							        <li>Handled incident/problem management in ServiceNow; produced KBs and RCA notes.</li>
-							        <li>Automated health checks for servers/apps/DBs using batch scripts.</li>
-							      </ul>
-							    </li>
-							  </ul>
-							</section>
+							<!----------------- EXPERIENCE (Vertical Timeline) ---------------------------->
+<section id="exp" class="main">
+  <header class="major">
+    <h2>Experience</h2>
+    <p>Highlights of my recent work</p>
+  </header>
 
+  <div class="timeline">
 
+    <!-- Siemens Healthineers -->
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <span class="tl-date">Jan 2023 – Mar 2025 · Erlangen, Germany</span>
+        <h3 class="tl-title">Working Student – IT Consultant · Siemens Healthineers</h3>
+        <ul>
+          <li>Assessed on-prem servers for Azure migration; increased quarterly migrations ~60% and saved ~€15k/month.</li>
+          <li>Built a centralized data inventory (infra requirements & IT assets); automated ELT with Azure Blob + Snowflake.</li>
+          <li>Integrated multi-source data (CMDB, Excel, ITAM) with SQL; delivered stakeholder dashboards in Power BI.</li>
+          <li>Regression-tested ServiceNow workflows (MWP install, provisioning, decommissioning) and authored KB articles.</li>
+          <li>Edited ServiceNow Flow Designer/Script steps (JSON) to automate decision routing; built live monitoring dashboards.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FAU -->
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <span class="tl-date">Sep 2022 – Dec 2022 · Erlangen, Germany</span>
+        <h3 class="tl-title">Student Research Assistant · Lehrstuhl für Informationstechnik (FAU)</h3>
+        <ul>
+          <li>Developed and maintained GitLab CI/CD pipelines to automate deployments.</li>
+          <li>Contributed code, reviews, and testing to keep projects stable and releasable.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Accenture -->
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <span class="tl-date">Nov 2020 – Mar 2022 · Bengaluru, India</span>
+        <h3 class="tl-title">Associate Software Engineer · Accenture</h3>
+        <ul>
+          <li>Implemented CI/CD for builds, tests, and deployments.</li>
+          <li>Wrote SQL & stored procedures for compliant data validation and reporting.</li>
+          <li>Improved incident/problem management with KB articles & RCA; handled 30–40% of daily tickets via ServiceNow.</li>
+          <li>Performed health checks for servers/apps/DBs with batch scripts; ensured availability and quick troubleshooting.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
 						
-							<section id="first" class="main special">
-								<header class="major">
-									<h2>My Work Experience So Far</h2>
-								</header>
- 								<ul class="features">
-									<li>
-										<span class="icon solid major style1 fa-code"></span>
-										<h3>Ipsum consequat</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-									<li>
-										<span class="icon major style3 fa-copy"></span>
-										<h3>Amed sed feugiat</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-									<li>
-										<span class="icon major style5 fa-gem"></span>
-										<h3>Dolor nullam</h3>
-										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-									</li>
-								</ul> 
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
+
 
 						<!-- section 3 SKILLS -->
 							<section id="skills" class="main special">
@@ -266,6 +242,7 @@
 	</body>
 
 </html>
+
 
 
 
