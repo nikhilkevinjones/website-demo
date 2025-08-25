@@ -3785,38 +3785,44 @@ input, select, textarea {
 
 		}
 
-/* === Photo grid (3 columns desktop, responsive) === */
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.75rem;                /* space between photos */
-  margin-top: 0.5rem;
-}
-.photo-grid figure {
-  position: relative;
+/* === Small photo table === */
+.table-responsive { overflow-x: auto; }
+
+.photo-table {
   width: 100%;
-  aspect-ratio: 4 / 3;         /* keep consistent shape; change to 1 / 1 for squares */
-  overflow: hidden;
-  border-radius: 12px;
-  background: rgba(255,255,255,0.06);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-  margin: 0;                   /* reset default figure margin */
-}
-.photo-grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;           /* “fit the image in it” */
-  object-position: center;
-  display: block;
+  border-collapse: separate;
+  border-spacing: 12px;                 /* gap between cells */
+  margin: 0 auto;
 }
 
-/* Tablet: 2 columns */
-@media (max-width: 980px) {
-  .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.photo-table td {
+  text-align: center;
+  vertical-align: middle;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
-/* Mobile: 1 column */
+
+.photo-table td.empty {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.photo-table img.thumb {
+  width: 180px;                          /* ← make thumbnails smaller/larger here */
+  height: 120px;
+  object-fit: cover;                      /* crops to fit the fixed box */
+  object-position: center;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Slightly smaller thumbs on small screens */
 @media (max-width: 600px) {
-  .photo-grid { grid-template-columns: 1fr; }
+  .photo-table img.thumb { width: 140px; height: 100px; }
 }
 
 
