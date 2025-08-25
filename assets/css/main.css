@@ -3786,58 +3786,6 @@ input, select, textarea {
 		}
 
 
-
-
-/* === Photo table (3×2), box fits picture === */
-.table-responsive { overflow-x: auto; }
-
-.photo-table{
-  width:100%;
-  max-width:960px;              /* overall table width */
-  table-layout:fixed;           /* 3 equal columns */
-  border-collapse:separate;
-  border-spacing:16px;          /* gaps between cells */
-  margin:0 auto;
-}
-.photo-table td{
-  width:33.333%;
-  padding:0;                    /* <<< no padding inside the cell */
-  background:transparent;       /* <<< remove background from cell */
-  border:none;
-  box-shadow:none;
-  vertical-align:middle;
-  text-align:center;
-}
-
-/* Make the anchor a block so the frame fills the cell */
-.photo-table a{ display:block; }
-
-/* The frame IS the card, sized to fill the cell */
-.thumb-frame{
-  width:100%;                   /* <<< fills the cell */
-  aspect-ratio:4 / 3;           /* consistent shape; change to 1/1 for squares */
-  overflow:hidden;
-  border-radius:14px;
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.10);
-  box-shadow:0 8px 24px rgba(0,0,0,0.15);
-}
-
-/* Image fills the frame neatly */
-.photo-table img.thumb{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-  display:block;
-}
-
-/* Smaller on phones (optional) */
-@media (max-width:600px){
-  .photo-table{ border-spacing:12px; }
-}
-
-
 /* === Small photo table (3 columns, fixed thumbnail size) === */
 .table-responsive { overflow-x: auto; }
 
@@ -3889,6 +3837,7 @@ input, select, textarea {
 @media (max-width: 600px) {
   .thumb-frame { max-width: 180px; }
 }
+
 
 
 
