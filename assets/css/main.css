@@ -3789,7 +3789,7 @@ input, select, textarea {
 .table-responsive { overflow-x: auto; }
 
 .photo-table {
-  width: 100%;
+  width: 10%;
   border-collapse: separate;
   border-spacing: 12px;                 /* gap between cells */
   margin: 0 auto;
@@ -3812,8 +3812,8 @@ input, select, textarea {
 }
 
 .photo-table img.thumb {
-  width: 180px;                          /* ← make thumbnails smaller/larger here */
-  height: 120px;
+  width: 18px;                          /* ← make thumbnails smaller/larger here */
+  height: 12px;
   object-fit: cover;                      /* crops to fit the fixed box */
   object-position: center;
   display: block;
@@ -3824,6 +3824,7 @@ input, select, textarea {
 @media (max-width: 600px) {
   .photo-table img.thumb { width: 140px; height: 100px; }
 }
+
 
 
 
