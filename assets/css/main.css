@@ -3786,58 +3786,56 @@ input, select, textarea {
 		}
 
 
-/* === Small photo table (3 columns, fixed thumbnail size) === */
+
+
+/* === Photo table (3×2), box fits picture === */
 .table-responsive { overflow-x: auto; }
 
-.photo-table {
-  width: 100%;
-  max-width: 960px;            /* keeps the whole table from stretching too wide */
-  table-layout: fixed;         /* equal-width columns */
-  border-collapse: separate;
-  border-spacing: 16px;
-  margin: 0 auto;
+.photo-table{
+  width:100%;
+  max-width:960px;              /* overall table width */
+  table-layout:fixed;           /* 3 equal columns */
+  border-collapse:separate;
+  border-spacing:16px;          /* gaps between cells */
+  margin:0 auto;
+}
+.photo-table td{
+  width:33.333%;
+  padding:0;                    /* <<< no padding inside the cell */
+  background:transparent;       /* <<< remove background from cell */
+  border:none;
+  box-shadow:none;
+  vertical-align:middle;
+  text-align:center;
 }
 
-.photo-table td {
-  width: 33.333%;
-  text-align: center;
-  vertical-align: middle;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 12px;
-  padding: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+/* Make the anchor a block so the frame fills the cell */
+.photo-table a{ display:block; }
+
+/* The frame IS the card, sized to fill the cell */
+.thumb-frame{
+  width:100%;                   /* <<< fills the cell */
+  aspect-ratio:4 / 3;           /* consistent shape; change to 1/1 for squares */
+  overflow:hidden;
+  border-radius:14px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.10);
+  box-shadow:0 8px 24px rgba(0,0,0,0.15);
 }
 
-.photo-table td.empty {
-  background: transparent;
-  border: none;
-  box-shadow: none;
+/* Image fills the frame neatly */
+.photo-table img.thumb{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
 }
 
-/* Frame constrains size; image fills it */
-.thumb-frame {
-  width: 100%;
-  max-width: 240px;            /* << change this to make thumbnails smaller/larger */
-  aspect-ratio: 4 / 3;         /* keeps a consistent shape */
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 10px;
+/* Smaller on phones (optional) */
+@media (max-width:600px){
+  .photo-table{ border-spacing:12px; }
 }
-
-.photo-table img.thumb {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;            /* fills the frame neatly */
-  object-position: center;
-  display: block;
-}
-
-/* Smaller thumbs on narrow screens */
-@media (max-width: 600px) {
-  .thumb-frame { max-width: 180px; }
-}
-
 
 
 
